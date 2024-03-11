@@ -53,7 +53,7 @@ export function Form({ changeStep }: IProps) {
             bgcolor: "#FE008A",
           }}
         >
-          <img src={Logo} alt="Logotipo do App" />
+          <img src={Logo} alt="Logotipo do App" width="80px" />
         </Box>
         <Box
           sx={{ width: 296 }}
