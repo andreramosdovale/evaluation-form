@@ -41,7 +41,10 @@ export function Form({ changeStep }: IProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit(handleSubmitForm)}>
+    <form
+      data-testid="form-component"
+      onSubmit={handleSubmit(handleSubmitForm)}
+    >
       <Box display="flex" alignItems="center" flexDirection="column" gap={4}>
         <Box
           display="flex"
@@ -70,6 +73,7 @@ export function Form({ changeStep }: IProps) {
             name="rating"
             value={value}
             size="large"
+            data-testid="rating"
             onChange={(_, newValue) => {
               setValue(newValue);
             }}
@@ -85,6 +89,8 @@ export function Form({ changeStep }: IProps) {
             variant="outlined"
             size="small"
             fullWidth
+            data-testid="name"
+            label="name"
             {...register("name")}
           />
           {errors.name && (
@@ -97,7 +103,12 @@ export function Form({ changeStep }: IProps) {
           <Typography py={1} variant="subtitle2">
             Comentário (opcional)
           </Typography>
-          <Textarea id="comment" minRows={4} {...register("comment")} />
+          <Textarea
+            id="comment"
+            minRows={4}
+            data-testid="comment"
+            {...register("comment")}
+          />
         </Box>
         <Button
           type="submit"
@@ -112,6 +123,7 @@ export function Form({ changeStep }: IProps) {
             textTransform: "inherit",
             "&:hover": { backgroundColor: "#FE008A" },
           }}
+          data-testid="button"
         >
           Enviar avaliação
         </Button>

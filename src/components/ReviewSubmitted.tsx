@@ -13,7 +13,10 @@ export function ReviewSubmitted() {
   }, []);
 
   return (
-    <Box sx={{ bgcolor: "#FE008A", height: "100vh" }}>
+    <Box
+      data-testid="review-submitted-component"
+      sx={{ bgcolor: "#FE008A", height: "100vh" }}
+    >
       <Box
         display="flex"
         justifyContent="center"
