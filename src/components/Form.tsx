@@ -90,7 +90,6 @@ export function Form({ changeStep }: IProps) {
             size="small"
             fullWidth
             data-testid="name"
-            label="name"
             {...register("name")}
           />
           {errors.name && (
